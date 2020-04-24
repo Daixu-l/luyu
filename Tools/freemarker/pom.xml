@@ -3,14 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>freemarker</artifactId>
-        <groupId>tools</groupId>
+        <artifactId>tools</artifactId>
+        <groupId>luyu</groupId>
         <version>1</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
     <artifactId>freemarker</artifactId>
     <version>1</version>
 
+    <dependencies>
 
+        <!-- freemarker jar -->
+      <dependency>
+          <groupId>org.freemarker</groupId>
+          <artifactId>freemarker</artifactId>
+          <version>2.3.20</version>
+      </dependency>
+    </dependencies>
 </project>
