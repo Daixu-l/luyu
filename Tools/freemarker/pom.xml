@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>tools</groupId>
     <artifactId>freemarker</artifactId>
     <version>1</version>
 
