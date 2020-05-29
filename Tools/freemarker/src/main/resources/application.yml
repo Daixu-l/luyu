@@ -1,0 +1,4 @@
+spring:
+  freemarker:
+    settings:
+      number_format: 0

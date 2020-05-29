@@ -16,7 +16,7 @@ import java.util.HashMap;
 public class Test {
 
     public static void main(String[] args) throws IOException, TemplateException {
-        System.out.println(testCombinationPrintlnString());
+        System.out.println(testPrintlnNumber());
 
     }
 
@@ -90,7 +90,7 @@ public class Test {
     private static String testPrintlnNumber() throws IOException, TemplateException {
         HashMap<String, Object> templateDataMap = new HashMap<String, Object>();
         JSONObject templateData = new JSONObject();
-        templateData.put("number", 1111);
+        templateData.put("number", 1);
 
         //将浮点类型的数字精确到小数点后一位且不会自动四舍五入 后面的0个数代表精确的位数以此类推,如果原来的数字位数不够则用0填充
         String template1 = "test number ${data.number?string[\"0.00\"]}}";
@@ -102,8 +102,16 @@ public class Test {
         String template4 = "test number ${data.number?string[\"0000000\"]}";
         //将数字输出去掉 ,
         String template5 = "test number ${data.number?c}";
+
+        //测试数据中进行运算
+        String template6 = "test number ${(data.number*100)?c}";
+
+        //对模板进行三目运算
+        String template7 = "test number ${(data.number == 1)?string('ss','FF')}";
+
+
         templateDataMap.put("data", templateData);
-        return FreemarkerUtil.processTemplate(template5, templateDataMap);
+        return FreemarkerUtil.processTemplate(template7, templateDataMap);
     }
 
 
